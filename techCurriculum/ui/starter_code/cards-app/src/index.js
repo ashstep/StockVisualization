@@ -1,4 +1,6 @@
 /**
+* @author (edited by) Ashka Stephen
+* 
 * Copyright 2017 Goldman Sachs.
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -18,7 +20,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../stylesheet.css';
 
+
+//title and subtitle element creation
+
+
+const cardsTitle = (
+		<div>
+			<h1> Cards </h1>
+			<h3> Share your ideas </h3>
+		</div>
+);
+
+
+//this is like a Main function
 ReactDOM.render(
-  <p>Hello World</p>,
+  cardsTitle,  
+  
+  //looks for element with the ID root -> its the entry point
+  //everything builds from here
   document.getElementById('root')
 );
