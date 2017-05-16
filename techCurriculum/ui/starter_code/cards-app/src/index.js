@@ -19,6 +19,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../stylesheet.css';
+import myTitle from './Components/Title';
 
 
 //title and subtitle element creation

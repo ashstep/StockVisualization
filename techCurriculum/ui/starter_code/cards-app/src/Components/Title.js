@@ -14,5 +14,4 @@ function myTitle(){
 	);
 }
 
-
 export default myTitle;
