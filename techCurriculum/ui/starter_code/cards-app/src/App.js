@@ -25,7 +25,8 @@ function App() {
 	  return (
 			    <div>
 			      <Title />
-			      <Card />
+			      <Card author='Joe Smith' text='cool!'/>
+			      <Card author='Another one' text='wow!'/>
 			    </div>
 			  );
 }
