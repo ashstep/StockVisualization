@@ -17,13 +17,17 @@
 **/
 
 import React from 'react';
-import Message from './Components/Message';
+import Title from './Components/Title';
+import Card from './Components/Card';
+
 
 function App() {
-  return (
-		  
-    <div> <Message/></div>
-  );
+	  return (
+			    <div>
+			      <Title />
+			      <Card />
+			    </div>
+			  );
 }
 
 export default App;
