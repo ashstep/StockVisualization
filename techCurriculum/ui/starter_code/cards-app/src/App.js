@@ -17,13 +17,12 @@
 **/
 
 import React from 'react';
+import Message from './Components/Message';
 
 function App() {
   return (
-    <div>
-      <h1>Wow you know how to use... </h1>
-      <h2> Components! </h2>
-    </div>
+		  
+    <div> <Message/></div>
   );
 }
 

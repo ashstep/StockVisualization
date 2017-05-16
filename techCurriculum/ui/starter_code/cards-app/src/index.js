@@ -21,6 +21,8 @@ import ReactDOM from 'react-dom';
 import '../stylesheet.css';
 import myTitle from './Components/Title';
 import App from './App';
+import Message from './Components/Message';
+
 
 
 ReactDOM.render(
