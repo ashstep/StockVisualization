@@ -69,6 +69,7 @@ public class StarterApp extends Application<Configuration> {
     @Override
     public void run(Configuration c, Environment e) throws Exception {
         LOGGER.info("Registering REST resources");
+
         e.jersey().register(new Example1Resource());
 //        e.jersey().register(new Example2Resource());
 //        e.jersey().register(new Example3Resource());
@@ -99,5 +100,4 @@ public class StarterApp extends Application<Configuration> {
 
         System.out.println("Go to localhost:8080/hello/ok in your browser.");
     }
-
 }
