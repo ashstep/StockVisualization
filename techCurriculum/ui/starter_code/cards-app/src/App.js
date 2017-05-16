@@ -14,21 +14,45 @@
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+* 
+* Hardcode 2 initial card vals in the array 
 **/
 
 import React from 'react';
 import Title from './Components/Title';
 import Card from './Components/Card';
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cards: [
+        {
+          author: 'abc',
+          text: ' cool!'
+        },
+        {
+          author: '124',
+          text: ' wow!'
+        }
+      ]
+    };
+  }
+  
+  render() {
+    const cards = this.state.cards.map((card, index) => (
+      <Card author={card.author}
+        text={card.text}
+        key={index} />
+    ));
 
-function App() {
-	  return (
-			    <div>
-			      <Title />
-			      <Card author='Joe Smith' text='cool!'/>
-			      <Card author='Another one' text='wow!'/>
-			    </div>
-			  );
+    return (
+      <div>
+        <Title />
+        { cards }
+      </div>
+    );
+  }
 }
 
 export default App;

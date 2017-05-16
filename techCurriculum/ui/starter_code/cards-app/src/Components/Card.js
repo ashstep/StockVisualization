@@ -1,5 +1,8 @@
 /**
- * Card 
+ * Added
+ * - array
+ * - each one has a user and a message -> two key components
+ * Refactored cards to be stored in a State 
  * @author Ashka Stephen
  */
 
