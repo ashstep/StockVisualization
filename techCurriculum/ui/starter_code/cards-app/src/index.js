@@ -23,11 +23,8 @@ import myTitle from './Components/Title';
 import App from './App';
 
 
-//this is like a Main function
 ReactDOM.render(
 		//instantiate an app component
   <App />,
-  //looks for element with the ID root -> its the entry point
-  //everything builds from here
   document.getElementById('root')
 );
