@@ -7,10 +7,12 @@ import React from 'react';
 import User from './User';
 import Message from './Message';
 
+
 function Card() {
   return (
     <div className='card'>
       <User />
+      <User name='J Smith'/>
       <div className='card-main'>
         <Message />
       </div>
