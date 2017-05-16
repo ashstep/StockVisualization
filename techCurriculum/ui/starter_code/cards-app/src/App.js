@@ -21,8 +21,8 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Hello World 2</h1>
-      <h2>leggooo </h2>
+      <h1>Wow you know how to use... </h1>
+      <h2> Components! </h2>
     </div>
   );
 }

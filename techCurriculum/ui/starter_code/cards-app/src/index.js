@@ -20,21 +20,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../stylesheet.css';
 import myTitle from './Components/Title';
-
-
-//title and subtitle element creation
-const cardsTitle = (
-		<div>
-			<h1> Cards </h1>
-			<h3> Share your ideas </h3>
-		</div>
-);
+import App from './App';
 
 
 //this is like a Main function
 ReactDOM.render(
-  cardsTitle,  
-  
+		//instantiate an app component
+  <App />,
   //looks for element with the ID root -> its the entry point
   //everything builds from here
   document.getElementById('root')
