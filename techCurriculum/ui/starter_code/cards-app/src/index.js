@@ -22,8 +22,6 @@ import '../stylesheet.css';
 
 
 //title and subtitle element creation
-
-
 const cardsTitle = (
 		<div>
 			<h1> Cards </h1>
