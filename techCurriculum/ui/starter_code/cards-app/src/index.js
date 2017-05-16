@@ -24,7 +24,6 @@ import App from './App';
 
 
 ReactDOM.render(
-		//instantiate an app component
   <App />,
   document.getElementById('root')
 );
