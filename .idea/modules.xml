@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EngineeringEssentials.iml" filepath="$PROJECT_DIR$/EngineeringEssentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/techCurriculum/services/engineering-essentials.iml" filepath="$PROJECT_DIR$/techCurriculum/services/engineering-essentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/techCurriculum/services/EngineeringEssentialsServices/engineering-essentials-services.iml" filepath="$PROJECT_DIR$/techCurriculum/services/EngineeringEssentialsServices/engineering-essentials-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/caseStudy/services/stock-visualization-app.iml" filepath="$PROJECT_DIR$/caseStudy/services/stock-visualization-app.iml" />
     </modules>
   </component>
 </project>

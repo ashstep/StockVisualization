@@ -24,12 +24,12 @@ import java.util.List;
  * specific language governing permissions and limitations
  * under the License.
  */
-@Path("events")
+@Path("company")
 public class Example8SolutionResource {
 
     @GET
-    @Path("{country}/wins")
-    public int getWins(@PathParam("country") String country) throws IOException {
+    @Path("{comp}")
+    public int getWins(@PathParam("comp") String country) throws IOException {
 
         List<Event> events = FileHelper.readAllEvents("events.json");
 

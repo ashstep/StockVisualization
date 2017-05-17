@@ -27,4 +27,32 @@ public class Company {
     // provided data in resources/data
 
     // TODO - add getter and setter methods for your attributes
+	
+	
+	private String myName;
+	
+	
+	public Company getCompany(){
+		return this;
+	}
+	
+	public void setName(String name){
+		this.myName = name;
+	}
+	
+	public String getName(){
+		return this.myName;
+	}
+
+
+	public void setVar(){
+		
+	}
+
+	public void setVar2(){
+		
+	}
+
+	
+	
 }

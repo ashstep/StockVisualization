@@ -16,11 +16,25 @@
 
 package utility;
 
+import java.io.File;
+
 /**
  * Utility class to validate inputs
  */
 public class InputValidator {
 
+	
+	
+	ObjectMapper objectMapper = new ObjectMapper();
+
+	File file = new File("data/car.json");
+
+	Car car = objectMapper.readValue(file, Car.class);
+
+	
+	
+	
+	
     // TODO - write a method that will validate your JSON input files
 
     // TODO - write a method that will validate the inputs to the Company Resource
