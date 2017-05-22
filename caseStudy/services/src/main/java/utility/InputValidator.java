@@ -16,29 +16,43 @@
 
 package utility;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import pojo.Company;
+import pojo.Stock;
+import java.util.*;
+
 import java.io.File;
+import java.io.IOException;
 
 /**
- * Utility class to validate inputs
+ * Utility class to validate input JSON files
  */
 public class InputValidator {
+    public ObjectMapper objectMapper = new ObjectMapper();
 
-	
-	
-	ObjectMapper objectMapper = new ObjectMapper();
+    /**
+     * @return List of Stocks which are read from the file
+     */
+    public List<Stock> getStocks() throws IOException {
+        File file2 = new File("services/src/main/resources/data/historicalStockData.json");
+        this.checkFile(file2);
+        List<Stock> stockList = new ArrayList<>();
+        return objectMapper.readValue(file2, stockList.getClass());
+    }
 
-	File file = new File("data/car.json");
+    /**
+     * @return List of Companies read from the file
+     */
+    public List<Company> getCompanies() throws IOException {
+        File file = new File("services/src/main/resources/data/companyInfo.json");
+        this.checkFile(file);
+        return objectMapper.readValue(file, new TypeReference<List<Company>>(){});
+    }
 
-	Car car = objectMapper.readValue(file, Car.class);
-
-	
-	
-	
-	
-    // TODO - write a method that will validate your JSON input files
-
-    // TODO - write a method that will validate the inputs to the Company Resource
-
-    // TODO - write a method that will validate the inputs to the Stock Resource
-
+    /**
+     * Check if a file is readable and validates files
+     */
+    private boolean checkFile(File file){
+        return ((file.canRead()) && (file != null) &&(file.exists()));
+    }
 }

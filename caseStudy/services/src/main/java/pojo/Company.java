@@ -1,58 +1,30 @@
-/**
- * Copyright 2017 Goldman Sachs.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
 package pojo;
+		import java.util.List;
+		import java.util.Map;
 
 /**
- * This class will define a company and its attributes
- * Look at resources/data/companyInfo.json
+ * This class will define a company's end-of-day stock price
+ * Look at resources/data/historicalStockData.json
  */
 public class Company {
 
-    // TODO - Think back to your modelling session
-    // Define the attributes of a Company based on the
-    // provided data in resources/data
+	private String name;
+	private List<Map<String, Double>> dailyClosePrice;
 
-    // TODO - add getter and setter methods for your attributes
-	
-	
-	private String myName;
-	
-	
-	public Company getCompany(){
-		return this;
-	}
-	
 	public void setName(String name){
-		this.myName = name;
+		this.name = name;
 	}
-	
+
 	public String getName(){
-		return this.myName;
+		return this.name;
 	}
 
-
-	public void setVar(){
-		
+	public void setPrice(List<Map<String, Double>> dailyClosePrice){
+		this.dailyClosePrice = dailyClosePrice;
 	}
 
-	public void setVar2(){
-		
+	public List<Map<String, Double>> getPrice(){
+		return this.dailyClosePrice;
 	}
 
-	
-	
 }

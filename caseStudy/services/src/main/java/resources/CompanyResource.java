@@ -15,6 +15,8 @@
  */
 
 package resources;
+import pojo.Stock;
+import utility.InputValidator;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.GET;
@@ -23,42 +25,35 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
+import java.util.List;
+
 
 @Path("company")
 public class CompanyResource {
     @GET
-    @Path("{comp}")
+    @Path("/ok")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getResponse(@PathParam("comp") String comp) throws IOException {
-        return Response.status(Response.Status.OK).entity(comp).build();
-    }
+    public Response getResponse(@PathParam("company") String company, @PathParam("start") String start,
+                                @PathParam("end") String end) throws IOException {
+        InputValidator inputValidator = new InputValidator();
+        List<Stock> stockDates = inputValidator.getStocks();
+        for (Stock s : stockDates) {
 
-
-
-
-
-
-
-    @Path("company")
-    public class Example8SolutionResource {
-
-        @GET
-        @Path("{comp}")
-        public int getWins(@PathParam("comp") String country) throws IOException {
-
-            List<Event> events = FileHelper.readAllEvents("events.json");
-
-            int numWins = 0;
-            for (Event event: events) {
-                if (event.getWinningCountry().name().equalsIgnoreCase(country)) {
-                    ++numWins;
-                }
-
-            }
-            return numWins;
         }
+
+        return Response.status(Response.Status.OK).entity(company).build();
     }
+    @GET
+    @Path("/hello")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getResponse() throws IOException {
+        InputValidator inputValidator = new InputValidator();
+        List<Stock> stockDates = inputValidator.getStocks();
+        System.out.println("hello");
+        for (Stock s : stockDates) {
 
+        }
+        return "Company details";
+        //return Response.status(Response.Status.OK).entity(company).build();
+    }
 }
-
-
